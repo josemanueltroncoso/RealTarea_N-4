@@ -33,18 +33,35 @@ proc.time () -  t
 #6.-
 
 lista<-" porque la llama que llama estando en llamas me llama, alguien más llama "
-splitLista<-strsplit(lista, " ")[[1]]
-splitEspacioLista<-tolower(splitLista)
-unlistLista<-unlist(splitEspacioNoticia)
-tablapalabras<-table(unlistLista)
-dfPalabrasNoticia<-as.data.frame(tablapalabras)
 
 #8.-
-list()
-contarSaldoNegativo<-function(saldoCuenta){
-  if(saldoCuenta<0){
-    +1
-  }else{
-    0 
+
+clientes<-list(list(1,"Kati",-500),list(2,"Mati",900),list(3,"Joseti",-100),list(4,"Nicoti",-300))
+
+
+contarSaldoNegativo <- function(listaclientes){
+  QClientesSaldoNegativo <- 0
+  for (cliente in listaclientes){
+    if (cliente[3] < 0){
+      QClientesSaldoNegativo<- (QClientesSaldoNegativo+1)
+    }
   }
+  return(QClientesSaldoNegativo)
 }
+
+contarSaldoNegativo(clientes)
+
+#9.-
+Frase <- "La pepsi estaba deliciosa"
+
+sinVocales <- function(frasesita){
+  stringsinvocales <- ""
+  strspliteada <- strsplit(frasesita, "")[[1]]  
+  for (letra in strspliteada){
+    if(letra != "a" && letra != "e" && letra != "i" && letra != "o" && letra != "u") {
+      stringsinvocales <- paste(stringsinvocales, letra, sep="")
+    }
+  }
+  return(stringsinvocales)
+}
+sinVocales(Frase)
