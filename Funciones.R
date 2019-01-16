@@ -34,6 +34,7 @@ proc.time () -  t
 
 lista<-" porque la llama que llama estando en llamas me llama, alguien más llama "
 
+
 #8.-
 
 clientes<-list(list(1,"Kati",-500),list(2,"Mati",900),list(3,"Joseti",-100),list(4,"Nicoti",-300))
